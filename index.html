@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hangman Game by Jiji</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="container">
+
+  <h1>Hangman Game</h1>
+
+  <div id="categorySelection">
+    <label for="category">Choose a category:</label>
+    <select id="category">
+      <option value="" disabled selected>Select category</option>
+      <option value="fruits">Fruits</option>
+      <option value="computers">Computers</option>
+      <option value="animals">Animals</option>
+      <option value="sports">Sports</option>
+      <option value="countries">Countries</option>
+      <option value="colors">Colors</option>
+    </select>
+    <button id="startGameBtn" disabled>Start Game</button>
+  </div>
+
+  <div id="gameArea" style="display:none;">
+    <div id="wordDisplay"></div>
+    <div id="message"></div>
+    <div id="lives"></div>
+
+    <input type="text" id="letterInput" maxlength="1" autofocus />
+    <button id="guessBtn">Guess</button>
+    <button id="playAgain" style="display:none;">Play Again</button>
+
+    <div id="hangman">
+      <div class="part base"></div>
+      <div class="part pole"></div>
+      <div class="part topbar"></div>
+      <div class="part rope"></div>
+      <div class="part head"></div>
+      <div class="part body"></div>
+      <div class="part leftarm"></div>
+      <div class="part rightarm"></div>
+      <div class="part leftleg"></div>
+      <div class="part rightleg"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
